@@ -2,3 +2,4 @@ node_modules/
 .vscode/
 credntials.json
 token.json
+tmpstops.json
