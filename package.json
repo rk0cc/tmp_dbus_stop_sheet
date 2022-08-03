@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "dbus_tmp_stop_fetcher",
+  "version": "1.0.0",
+  "description": "Fetching bus stop information which defined by TruckersMP",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "googleapis": "^105.0.0"
+  }
+}
