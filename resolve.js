@@ -7,9 +7,9 @@ function applyData(tmp, row) {
     coor.shift();
 
     tmp[row[1].toLowerCase()] = {
-        country: row[0].toLowerCase().replaceAll(" ", "_"),
-        dlc: row[3].toLowerCase().replaceAll(" ", "_"),
-        alt_name: row[2],
+        country: row[0].toUpperCase().replaceAll(" ", "_"),
+        dlc: row[3].toUpperCase().replaceAll(" ", "_"),
+        alt_name: row[2].length === 0 ? null : row[2],
         coordinate: coor
     };
 }
