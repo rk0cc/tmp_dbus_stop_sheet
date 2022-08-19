@@ -6,12 +6,14 @@ function applyData(tmp, row) {
     coor.pop();
     coor.shift();
 
-    tmp[row[1].toLowerCase()] = {
+    tmp.push({
+        truck_sim: "ETS2",
+        city_name: row[1],
+        alt_name: row[2].length === 0 ? null : row[2],
         country: row[0].toUpperCase().replaceAll(" ", "_"),
         dlc: row[3].toUpperCase().replaceAll(" ", "_"),
-        alt_name: row[2].length === 0 ? null : row[2],
         coordinate: coor
-    };
+    });
 }
 
 /**
@@ -19,7 +21,7 @@ function applyData(tmp, row) {
  * @param {any[][]} sheets 
  */
 function resolveToJson(sheets) {
-    var tmp = {};
+    var tmp = [];
 
     sheets.forEach((row) => {
         applyData(tmp, row);
